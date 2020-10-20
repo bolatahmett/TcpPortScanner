@@ -130,6 +130,18 @@
             "AsyncEnumerator": {
               "target": "Package",
               "version": "[4.0.2, )"
+            },
+            "Jaeger": {
+              "target": "Package",
+              "version": "[0.4.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "OpenTracing.Contrib.NetCore": {
+              "target": "Package",
+              "version": "[0.6.2, )"
             }
           },
           "imports": [
