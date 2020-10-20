@@ -1,5 +1,6 @@
 ﻿using PortScanTool.Model;
 using System;
+using System.Net;
 using System.Windows.Forms;
 
 namespace PortScanTool
@@ -46,12 +47,13 @@ namespace PortScanTool
             this.StartedIp = new System.Windows.Forms.MaskedTextBox();
             this.EndIp = new System.Windows.Forms.MaskedTextBox();
             this.IpRangeText = new System.Windows.Forms.Label();
+            this.ClearItems = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.threadTrackBar)).BeginInit();
             this.SuspendLayout();
             // 
             // run
             // 
-            this.run.Location = new System.Drawing.Point(112, 140);
+            this.run.Location = new System.Drawing.Point(48, 138);
             this.run.Name = "run";
             this.run.Size = new System.Drawing.Size(75, 23);
             this.run.TabIndex = 0;
@@ -129,7 +131,7 @@ namespace PortScanTool
             // 
             // terminate
             // 
-            this.terminate.Location = new System.Drawing.Point(202, 140);
+            this.terminate.Location = new System.Drawing.Point(138, 138);
             this.terminate.Name = "terminate";
             this.terminate.Size = new System.Drawing.Size(75, 23);
             this.terminate.TabIndex = 7;
@@ -140,9 +142,9 @@ namespace PortScanTool
             // StartedIp
             // 
             this.StartedIp.Location = new System.Drawing.Point(112, 80);
-            this.StartedIp.Mask = "000\\.000\\.000\\.000";
+            this.StartedIp.Mask = "###,###,###,###";
             this.StartedIp.Name = "StartedIp";
-            this.StartedIp.ValidatingType = typeof(IPValidator);
+            this.StartedIp.PromptChar = ' ';
             this.StartedIp.ResetOnSpace = false;
             this.StartedIp.Size = new System.Drawing.Size(84, 23);
             this.StartedIp.TabIndex = 8;
@@ -150,9 +152,9 @@ namespace PortScanTool
             // EndIp
             // 
             this.EndIp.Location = new System.Drawing.Point(202, 80);
-            this.EndIp.Mask = "000\\.000\\.000\\.000";
+            this.EndIp.Mask = "###,###,###,###";
             this.EndIp.Name = "EndIp";
-            this.StartedIp.ValidatingType = typeof(IPValidator);
+            this.EndIp.PromptChar = ' ';
             this.EndIp.ResetOnSpace = false;
             this.EndIp.Size = new System.Drawing.Size(84, 23);
             this.EndIp.TabIndex = 8;
@@ -166,6 +168,16 @@ namespace PortScanTool
             this.IpRangeText.TabIndex = 9;
             this.IpRangeText.Text = "Ip Range";
             // 
+            // ClearItems
+            // 
+            this.ClearItems.Location = new System.Drawing.Point(230, 138);
+            this.ClearItems.Name = "ClearItems";
+            this.ClearItems.Size = new System.Drawing.Size(75, 23);
+            this.ClearItems.TabIndex = 10;
+            this.ClearItems.Text = "Clear Items";
+            this.ClearItems.UseVisualStyleBackColor = true;
+            this.ClearItems.Click += new System.EventHandler(this.ClearItems_Click);
+            // 
             // PortScan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -173,6 +185,7 @@ namespace PortScanTool
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.terminate);
             this.Controls.Add(this.run);
+            this.Controls.Add(this.ClearItems);
             this.Controls.Add(this.EndIp);
             this.Controls.Add(this.IpRangeText);
             this.Controls.Add(this.StartedIp);
@@ -183,6 +196,8 @@ namespace PortScanTool
             this.Controls.Add(this.passedItemsText);
             this.Controls.Add(this.passedItems);
             this.Controls.Add(this.threadTrackBar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "PortScan";
             this.Text = "Port Scan";
             this.Load += new System.EventHandler(this.PortScan_Load);
@@ -207,6 +222,7 @@ namespace PortScanTool
         private MaskedTextBox StartedIp;
         private MaskedTextBox EndIp;
         private Label IpRangeText;
+        private Button ClearItems;
     }
 }
 

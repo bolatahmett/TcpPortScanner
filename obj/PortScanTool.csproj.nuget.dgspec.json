@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\NetsParker\\Code\\PortScanTool\\PortScanTool.csproj": {}
+    "D:\\Projects\\NetsParker\\TcpPortScanner\\PortScanTool.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\NetsParker\\Code\\PortScanTool\\PortScanTool.csproj": {
+    "D:\\Projects\\NetsParker\\TcpPortScanner\\PortScanTool.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\NetsParker\\Code\\PortScanTool\\PortScanTool.csproj",
+        "projectUniqueName": "D:\\Projects\\NetsParker\\TcpPortScanner\\PortScanTool.csproj",
         "projectName": "PortScanTool",
-        "projectPath": "D:\\Projects\\NetsParker\\Code\\PortScanTool\\PortScanTool.csproj",
+        "projectPath": "D:\\Projects\\NetsParker\\TcpPortScanner\\PortScanTool.csproj",
         "packagesPath": "C:\\Users\\AHMET BOLAT\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\NetsParker\\Code\\PortScanTool\\obj\\",
+        "outputPath": "D:\\Projects\\NetsParker\\TcpPortScanner\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

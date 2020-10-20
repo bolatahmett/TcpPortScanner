@@ -15,13 +15,15 @@ namespace PortScanTool.Model
         private static List<Tuple<IPAddress, int>> ipAdressWithPort = new List<Tuple<IPAddress, int>>();
         private static TrackBar trackBar;
         internal static Guid guid;
+        private static ScanStatus scanStatus = ScanStatus.None;
 
         public static CancellationTokenSource cancellationToken = new CancellationTokenSource();
 
         private static readonly object _sync = new object();
 
-        public static void Run(List<IPAddress> ipAddresses)
+        internal static void Run(List<IPAddress> ipAddresses)
         {
+            scanStatus = ScanStatus.Running;
             cancellationToken = new CancellationTokenSource();
             ipAdressWithPort = ipAddresses.AddPort();
             int maxDoP = trackBar.Value;
@@ -30,19 +32,21 @@ namespace PortScanTool.Model
 
         internal static void Cancel()
         {
+            scanStatus = ScanStatus.Canceled;
             guid = Guid.NewGuid();
             cancellationToken.Cancel();
         }
 
         internal static void ReRun()
         {
+            scanStatus = ScanStatus.Restarted;
             cancellationToken = new CancellationTokenSource();
             List<Tuple<IPAddress, int>> ipAdressWithPortEx = ipAdressWithPort.Except(inProccess).ToList();
             int maxDoP = trackBar.Value;
             _ = ParalelScan.ParallelForEachAsync(ipAdressWithPortEx, CheckTcpPort, guid, maxDoP, cancellationToken.Token);
         }
 
-        public static async Task CheckTcpPort(Tuple<IPAddress, int> ipAddressWithPort)
+        internal static async Task CheckTcpPort(Tuple<IPAddress, int> ipAddressWithPort)
         {
             IPAddress ipAddress = ipAddressWithPort.Item1;
             int port = ipAddressWithPort.Item2;
@@ -69,11 +73,14 @@ namespace PortScanTool.Model
 
         }
 
-        
-
         public static void SetTrackBar(TrackBar trackBar)
         {
             Scan.trackBar = trackBar;
+        }
+
+        internal static ScanStatus GetStatus()
+        {
+            return scanStatus;
         }
     }
 }
