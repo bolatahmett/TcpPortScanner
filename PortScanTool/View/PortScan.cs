@@ -33,8 +33,16 @@ namespace PortScanTool
                 ClearResults();
                 ProccessStatus.SetStatus("Generating Ip Address...");
                 List<IPAddress> ipAddressItems = GenerateIpAddress.GetFromRange(StartedIp.Text.Replace(" ", ""), EndIp.Text.Replace(" ", ""));
-                ProccessStatus.SetStatus("Scanning...");
-                Scan.Run(ipAddressItems);
+                if (ipAddressItems.Count == 0)
+                {
+                    ProccessStatus.SetStatus("...");
+                    MessageBox.Show("Please check ip range");
+                }
+                else
+                {
+                    ProccessStatus.SetStatus("Scanning...");
+                    Scan.Run(ipAddressItems);
+                }
             }
             else
             {
