@@ -1,0 +1,15 @@
+D:\Projects\NetsParker\Code\PortScanTool\bin\Debug\netcoreapp3.1\PortScanTool.exe
+D:\Projects\NetsParker\Code\PortScanTool\bin\Debug\netcoreapp3.1\PortScanTool.deps.json
+D:\Projects\NetsParker\Code\PortScanTool\bin\Debug\netcoreapp3.1\PortScanTool.runtimeconfig.json
+D:\Projects\NetsParker\Code\PortScanTool\bin\Debug\netcoreapp3.1\PortScanTool.runtimeconfig.dev.json
+D:\Projects\NetsParker\Code\PortScanTool\bin\Debug\netcoreapp3.1\PortScanTool.dll
+D:\Projects\NetsParker\Code\PortScanTool\bin\Debug\netcoreapp3.1\PortScanTool.pdb
+D:\Projects\NetsParker\Code\PortScanTool\obj\Debug\netcoreapp3.1\PortScanTool.PortScan.resources
+D:\Projects\NetsParker\Code\PortScanTool\obj\Debug\netcoreapp3.1\PortScanTool.csproj.GenerateResource.cache
+D:\Projects\NetsParker\Code\PortScanTool\obj\Debug\netcoreapp3.1\PortScanTool.AssemblyInfoInputs.cache
+D:\Projects\NetsParker\Code\PortScanTool\obj\Debug\netcoreapp3.1\PortScanTool.AssemblyInfo.cs
+D:\Projects\NetsParker\Code\PortScanTool\obj\Debug\netcoreapp3.1\PortScanTool.dll
+D:\Projects\NetsParker\Code\PortScanTool\obj\Debug\netcoreapp3.1\PortScanTool.pdb
+D:\Projects\NetsParker\Code\PortScanTool\obj\Debug\netcoreapp3.1\PortScanTool.genruntimeconfig.cache
+D:\Projects\NetsParker\Code\PortScanTool\bin\Debug\netcoreapp3.1\AsyncEnumerable.dll
+D:\Projects\NetsParker\Code\PortScanTool\obj\Debug\netcoreapp3.1\PortScanTool.csproj.CopyComplete
